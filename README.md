@@ -99,29 +99,7 @@ if __name__ == "__main__":
 
 Check out the [library docs](https://docs.browser-use.com) and the [cloud docs](https://docs.cloud.browser-use.com) for more!
 
-<br/>
 
-# 🔥 Deploy on Sandboxes
-
-We handle agents, browsers, persistence, auth, cookies, and LLMs. The agent runs right next to the browser for minimal latency.
-
-```python
-from browser_use import Browser, sandbox, ChatBrowserUse
-from browser_use.agent.service import Agent
-import asyncio
-
-@sandbox()
-async def my_task(browser: Browser):
-    agent = Agent(task="Find the top HN post", browser=browser, llm=ChatBrowserUse())
-    await agent.run()
-
-# Just call it like any async function
-asyncio.run(my_task())
-```
-
-See [Going to Production](https://docs.browser-use.com/production) for more details.
-
-<br/>
 
 # 🚀 Template Quickstart
 
@@ -149,7 +127,7 @@ uvx browser-use init --template default --output my_agent.py
 ### 📋 Form-Filling
 #### Task = "Fill in this job application with my resume and information."
 ![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)
-[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)
+
 
 
 ### 🍎 Grocery-Shopping
@@ -157,24 +135,15 @@ uvx browser-use init --template default --output my_agent.py
 
 https://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850
 
-[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)
-
 
 ### 💻 Personal-Assistant.
 #### Task = "Help me find parts for a custom PC."
 
 https://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06
 
-[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)
 
 
-### 💡See [more examples here ↗](https://docs.browser-use.com/examples) and give us a star!
 
-<br/>
-
-## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)
-
-<br/>
 
 # FAQ
 
@@ -225,10 +194,7 @@ Yes! Browser-Use is open source and free to use. You only need to choose an LLM 
 <details>
 <summary><b>How do I handle authentication?</b></summary>
 
-Check out our authentication examples:
-- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins
-- If you want to use temporary accounts with inbox, choose AgentMail
-- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)
+
 
 These examples show how to maintain sessions and handle authentication seamlessly.
 </details>
@@ -253,17 +219,3 @@ For production use cases, use our [Browser Use Cloud API](https://cloud.browser-
 </details>
 
 <br/>
-
-<div align="center">
-
-**Tell your computer what to do, and it gets it done.**
-
-<img src="https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f" width="400"/>
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)
-&emsp;&emsp;&emsp;
-[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)
-
-</div>
-
-<div align="center"> Made with ❤️ in Zurich and San Francisco </div>
